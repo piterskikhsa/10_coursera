@@ -38,7 +38,7 @@ def output_courses_info_to_xlsx(filepath, courses_info_list):
     ws.title = 'Coursera'
     ws.append([key for key in courses_info_list[0].keys()])
     for course_info in courses_info_list:
-        ws.append([info for info in course_info.values()])
+        ws.append([course_info_value for course_info_value in course_info.values()])
 
     wb.save(filepath)
     print('Файл успешно сохранен')
